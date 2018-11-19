@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AgendaFormComponent } from './agenda-form/agenda-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AgendaFormComponent
   ],
   imports: [
     BrowserModule,
