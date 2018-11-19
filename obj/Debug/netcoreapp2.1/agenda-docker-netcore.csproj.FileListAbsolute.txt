@@ -1,0 +1,14 @@
+/home/leandro/Desenvolvimento/agenda-docker-netcore/bin/Debug/netcoreapp2.1/agenda-docker-netcore.deps.json
+/home/leandro/Desenvolvimento/agenda-docker-netcore/bin/Debug/netcoreapp2.1/agenda-docker-netcore.runtimeconfig.json
+/home/leandro/Desenvolvimento/agenda-docker-netcore/bin/Debug/netcoreapp2.1/agenda-docker-netcore.runtimeconfig.dev.json
+/home/leandro/Desenvolvimento/agenda-docker-netcore/bin/Debug/netcoreapp2.1/agenda-docker-netcore.dll
+/home/leandro/Desenvolvimento/agenda-docker-netcore/bin/Debug/netcoreapp2.1/agenda-docker-netcore.pdb
+/home/leandro/Desenvolvimento/agenda-docker-netcore/obj/Debug/netcoreapp2.1/agenda-docker-netcore.csprojAssemblyReference.cache
+/home/leandro/Desenvolvimento/agenda-docker-netcore/obj/Debug/netcoreapp2.1/agenda-docker-netcore.csproj.CoreCompileInputs.cache
+/home/leandro/Desenvolvimento/agenda-docker-netcore/obj/Debug/netcoreapp2.1/agenda-docker-netcore.RazorAssemblyInfo.cache
+/home/leandro/Desenvolvimento/agenda-docker-netcore/obj/Debug/netcoreapp2.1/agenda-docker-netcore.RazorAssemblyInfo.cs
+/home/leandro/Desenvolvimento/agenda-docker-netcore/obj/Debug/netcoreapp2.1/agenda-docker-netcore.AssemblyInfoInputs.cache
+/home/leandro/Desenvolvimento/agenda-docker-netcore/obj/Debug/netcoreapp2.1/agenda-docker-netcore.AssemblyInfo.cs
+/home/leandro/Desenvolvimento/agenda-docker-netcore/obj/Debug/netcoreapp2.1/agenda-docker-netcore.RazorTargetAssemblyInfo.cache
+/home/leandro/Desenvolvimento/agenda-docker-netcore/obj/Debug/netcoreapp2.1/agenda-docker-netcore.dll
+/home/leandro/Desenvolvimento/agenda-docker-netcore/obj/Debug/netcoreapp2.1/agenda-docker-netcore.pdb
