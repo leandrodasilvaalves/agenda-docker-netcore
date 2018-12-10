@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-10 text-right"><button class="btn btn-primary">Salvar</button></div>
+    <div class="col-10 text-right"><button class="btn btn-primary" (click)="salvar()">Salvar</button></div>
   </div>
 
 <div class="row">
@@ -7,9 +7,15 @@
     <form>
         <div class="form-group">
           <label for="contatoNome">Nome do contato</label>
-          <input type="text" class="form-control" id="contatoNome" autocomplete="none" placeholder="Nome do contato">
+          <input type="text" 
+            class="form-control" 
+            autocomplete="off" 
+            [(ngModel)]="contato.nome"
+            name="nome" 
+            placeholder="Nome do contato"
+          >
         </div>
-        <app-telefone-form></app-telefone-form>
+        <app-telefone-form (telefonesEvent)="atualizarTelefones($event)"></app-telefone-form>
     </form>
   </div>
 </div>

@@ -22,12 +22,20 @@ export class TelefoneListaComponent implements OnInit {
   @Output()
   telefoneEdit = new EventEmitter();
 
+  @Output()
+  telefoneRemove = new EventEmitter();
+
   editar(telefone:ITelefone): void{
-    this.remover(telefone);
+    this.removeArray(telefone);
     this.telefoneEdit.emit(telefone);
   }
   
   remover(telefone: ITelefone): void{
+    this.removeArray(telefone);
+    this.telefoneRemove.emit(this.telefones);
+  }
+  
+  private removeArray(telefone: ITelefone):void{
     this.telefones.splice(this.telefones.findIndex(t => t === telefone),1);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ITelefone } from '../agenda.models';
 
 @Component({
@@ -11,6 +11,9 @@ export class TelefoneFormComponent implements OnInit {
   telefone: ITelefone;
   telefones: ITelefone[];
 
+  @Output()
+  telefonesEvent = new EventEmitter();
+
   constructor() { 
     this.telefone = {} as ITelefone;    
     this.telefones = [];
@@ -22,9 +25,15 @@ export class TelefoneFormComponent implements OnInit {
   add(telefone: ITelefone){
     this.telefones.push(telefone);
     this.telefone = {} as ITelefone;
+    this.telefonesEvent.emit(this.telefones);
   }
 
   onTelefoneEdit(telefone):void{
     this.telefone = telefone;
+  }
+
+  onTelefoneRemove(telefones): void{
+    this.telefones = telefones;
+    this.telefonesEvent.emit(telefones);
   }
 }

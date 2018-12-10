@@ -31,4 +31,9 @@
   </div>
 </div>
 
-<app-telefone-lista [telefones]="telefones" [displayCommands]="true" (telefoneEdit)="onTelefoneEdit($event)"></app-telefone-lista>
+<app-telefone-lista 
+  [telefones]="telefones" 
+  [displayCommands]="true" 
+  (telefoneEdit)="onTelefoneEdit($event)"
+  (telefoneRemove)="onTelefoneRemove($event)"
+  ></app-telefone-lista>
