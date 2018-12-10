@@ -5,7 +5,8 @@ import { ContatoFormComponent } from './contato-form/contato-form.component';
 
 const routes: Routes = [
   { path: '', component: ContatoListaComponent},
-  { path:'novo', component: ContatoFormComponent}
+  { path:'novo', component: ContatoFormComponent},
+  { path:'editar/:id', component: ContatoFormComponent},
 ];
 
 @NgModule({

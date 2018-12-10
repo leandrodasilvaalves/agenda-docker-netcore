@@ -23,8 +23,8 @@ namespace agenda_docker_netcore.Models
 
         public ICollection<Contato> ListarTodos() => CollectionMongo<Contato>(colecaoNome).Find(x => true).ToList();
         
-        public Contato ObterPorNome(string nome) 
-            => CollectionMongo<Contato>(colecaoNome).Find(x => x.Nome.Contains(nome)).FirstOrDefault();
+        public Contato ObterPorId(string id) 
+            => CollectionMongo<Contato>(colecaoNome).Find(x => x.Id.Equals(id)).FirstOrDefault();
 
         public void Incluir(Contato contato){            
             contato.Id = ObjectId.GenerateNewId().ToString();

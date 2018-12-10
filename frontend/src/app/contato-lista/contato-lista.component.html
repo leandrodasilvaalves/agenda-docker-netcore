@@ -14,8 +14,8 @@
         <app-telefone-lista [telefones]="contato.telefones"></app-telefone-lista>
       </td>
       <td>
-        <button class="btn btn-sm btn-info">Editar</button>  
-        <button class="btn btn-sm btn-danger">Excluir</button>
+        <a href="/editar/{{ contato.id }}" class="btn btn-sm btn-info">Editar</a>  
+        <button class="btn btn-sm btn-danger" (click)="excluir(contato)">Excluir</button>
       </td>
     </tr>
   </tbody>

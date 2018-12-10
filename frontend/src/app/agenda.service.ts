@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { IContato } from './agenda.models';
+import { Observable } from 'rxjs';
 
 
 const _endpoint = 'http://localhost:7000/api/contatos';
@@ -12,11 +13,23 @@ export class AgendaService {
 
   constructor(private http: HttpClient) { }  
 
-  public obterContatos(){
-    return this.http.get(_endpoint);
+  public obterContatos(): Observable<IContato[]>{
+    return this.http.get<IContato[]>(_endpoint);
   }
 
-  public incluirContato(contato: IContato){  
+  public obterPorId(id: string): Observable<IContato> {
+    return this.http.get<IContato>(`${_endpoint}/${id}`);
+  }
+
+  public incluirContato(contato: IContato){ 
     return this.http.post(_endpoint, contato);
+  }
+
+  public atualizarContato(contato: IContato){
+    return this.http.put(_endpoint, contato);
+  }
+
+  public excluirContato(id: string){
+    return this.http.delete(`${_endpoint}/${id}`);
   }
 }

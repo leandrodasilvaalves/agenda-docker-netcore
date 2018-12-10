@@ -13,9 +13,10 @@
             [(ngModel)]="contato.nome"
             name="nome" 
             placeholder="Nome do contato"
-          >
-        </div>
-        <app-telefone-form (telefonesEvent)="atualizarTelefones($event)"></app-telefone-form>
+          ></div>
+        <app-telefone-form 
+        (telefonesEvent)="atualizarTelefones($event)" 
+        [telefones]="contato.telefones"></app-telefone-form>
     </form>
   </div>
 </div>
