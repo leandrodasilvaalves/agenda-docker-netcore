@@ -18,9 +18,8 @@ export class ContatoListaComponent implements OnInit {
   }
 
   obterContatos(){
-    this.servico.obterContatos().subscribe( (data: IContato[]) => {
+    this.servico.obterContatos().subscribe((data: IContato[]) => {
       this.contatos = data;
-      console.log(this.contatos);
     });
   }
 }
