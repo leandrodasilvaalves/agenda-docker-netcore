@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ITelefone } from '../agenda.models';
 
 @Component({
   selector: 'app-telefone-form',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TelefoneFormComponent implements OnInit {
 
-  constructor() { }
+  telefone: ITelefone;
+  telefones: ITelefone[];
 
-  ngOnInit() {
+  constructor() { 
+    this.telefone = {} as ITelefone;    
+    this.telefones = [];
   }
 
+  ngOnInit() {    
+  }
+  
+  add(telefone: ITelefone){
+    this.telefones.push(telefone);
+    this.telefone = {} as ITelefone;
+  }
+
+  onTelefoneEdit(telefone):void{
+    this.telefone = telefone;
+  }
 }

@@ -1,12 +1,13 @@
 <div class="row">
-  <div class="col-2">DDD</div>
-  <div class="col-4">Número</div>
-  <div class="col-3">Whats?</div>
+  <div class="col-sm-2">DDD</div>
+  <div class="col-sm-5">Número</div>
+  <div class="col-sm-2">Whats?</div>
+  <div class="col-sm-3" *ngIf="displayCommands"></div>
 </div>
 <div class="row" *ngFor="let telefone of telefones">
-    <div class="col-2">{{ telefone.ddd }}</div>
-    <div class="col-7">{{ telefone.numero }}</div>
-    <div class="col-3">
+    <div class="col-sm-2">{{ telefone.ddd }}</div>
+    <div class="col-sm-5">{{ telefone.numero }}</div>
+    <div class="col-sm-2">
       <span *ngIf="telefone.whatsapp" >
         <svg 
           width="24" 
@@ -15,5 +16,9 @@
             <path fill="none" d="M0 0h24v24H0z"/>
             <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
       </span>
+    </div>
+    <div class="col-sm-3" *ngIf="displayCommands">
+      <button class="btn btn-sm btn-warning" (click)="editar(telefone)"><i class="fa fa-edit"></i></button>
+      <button class="btn btn-sm btn-danger" (click)="remover(telefone)"><i class="fa fa-trash"></i></button>
     </div>
 </div>
