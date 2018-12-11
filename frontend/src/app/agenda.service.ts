@@ -4,7 +4,7 @@ import { IContato } from './agenda.models';
 import { Observable } from 'rxjs';
 
 
-const _endpoint = 'http://localhost:7000/api/contatos';
+const _endpoint = 'agenda-api/api/contatos';
 
 @Injectable({
   providedIn: 'root'
