@@ -1,0 +1,27 @@
+[
+  {    
+    "Nome": "Fulano",
+    "Telefones": [
+      {
+        "DDD": 16,
+        "Numero": "99888-7765",
+        "Whatsapp": true
+      },
+      {
+        "DDD": 61,
+        "Numero": "36206655",
+        "Whatsapp": false
+      }
+    ]
+  },
+  {    
+    "Nome": "Cicrano",
+    "Telefones": [
+      {
+        "DDD": 61,
+        "Numero": "98153-2478",
+        "Whatsapp": true
+      }
+    ]
+  }
+]
