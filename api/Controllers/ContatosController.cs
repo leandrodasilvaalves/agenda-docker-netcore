@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using agenda_docker_netcore.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,10 +13,22 @@ namespace agenda_docker_netcore.Controllers
         public ContatoController(ContatoRepositorio repositorio) => _repositorio = repositorio;
 
         [HttpGet]
-        public IActionResult Get()=> Ok(_repositorio.ListarTodos());
+        public IActionResult Get(){
+            var resultado = _repositorio.ListarTodos();
+            if(resultado == (ICollection<Contato>)null)  
+                return NoContent();
+
+            return Ok(resultado);
+        }
 
         [HttpGet("{id}")]
-        public IActionResult Get(string id) => Ok(_repositorio.ObterPorId(id));
+        public IActionResult Get(string id) {            
+            var restulado = _repositorio.ObterPorId(id);
+            if(restulado == (Contato)null) 
+                return NoContent();
+            
+            return Ok(restulado);
+        }
 
         [HttpPost]
         public IActionResult Post([FromBody]Contato contato){
