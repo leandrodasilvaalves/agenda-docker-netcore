@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace agenda_docker_netcore.Controllers
 {
-    [Route("api/contatos")]
+    [Route("v1/contatos")]
     [ApiController]
     public class ContatoController : Controller
     {

@@ -1,30 +1,29 @@
 version: "3"
 
 services:  
-  front:
+  frontend:
     container_name: front
     build: ./frontend
     ports:
       - 3000:80
     depends_on: 
-      - db
-      - api
+      - backend
 
-  api:
+  backend:
     container_name: api
     build: ./api
     ports:
       - 7000:80
     depends_on:
-      - db
+      - database
 
   seed:
     container_name: seed
     build: ./mongo-config
     links:
-      - db
+      - database
 
-  db:
+  database:
     container_name: mongodb
     image: mongo 
     ports: 
